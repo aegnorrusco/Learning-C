@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 
+#Zadání - http://www.inf.upol.cz/downloads/studium/YUP1/s03PoleFunkce.pdf (Slide 21)
 
 double spoctiobjemkvadru(double strana_a, double strana_b, double strana_c) {
 	double objemkvadru = 0;
@@ -71,7 +72,7 @@ int main() {
 
 	}
 
-	else printf("Vstup nerozpozn�n. Zadejte 'kvadr' nebo 'valec'.\n");
+	else printf("Vstup nerozpoznán. Zadejte 'kvadr' nebo 'valec'.\n");
 
 	system("pause");
 	return 0;
