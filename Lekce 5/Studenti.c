@@ -11,7 +11,7 @@ typedef struct {
 
 
 typedef struct {
-	char jmeno, prijmeni; Datum narozen;
+	char jmeno[20], prijmeni[20]; Datum narozen;
 } student;
 
 int porovnej_vek(student s1, student s2) {
@@ -29,7 +29,7 @@ int porovnej_vek(student s1, student s2) {
 			else if (s1.narozen.Den == s2.narozen.Den)
 				return 0;
 			else
-				return -1;		
+				return -1;
 		else
 			return -1;
 	else
@@ -42,49 +42,38 @@ int porovnanyvek = 0;
 int printstarsiho(student s1, student s2, int porovnanyvek) {
 	/* Vytiskne porovnání věků dvou studentů.*/
 	switch (porovnanyvek) {
-		case 1:
-			printf("%c", s1.jmeno, "%c", s1.prijmeni, "je starsi než %c", s2.jmeno, "%c", s2.prijmeni, ".\n");
-			break;
-		case -1:
-			printf("%c", s1.jmeno, "%c", s1.prijmeni, "je mladsi než %c", s2.jmeno, "%c", s2.prijmeni, ".\n");
-			break;
-		case 0:
-			printf("%c", s1.jmeno, "%c", s1.prijmeni, "je stejne stary jako %c", s2.jmeno, "%c", s2.prijmeni, ".\n");
-			break;
+	case 1:
+		printf("%s", s1.jmeno, "%s", s1.prijmeni, "je starsi než %s", s2.jmeno, "%s", s2.prijmeni, ".\n");
+		break;
+	case -1:
+		printf("%s", s1.jmeno, "%s", s1.prijmeni, "je mladsi než %s", s2.jmeno, "%s", s2.prijmeni, ".\n");
+		break;
+	case 0:
+		printf("%s", s1.jmeno, "%s", s1.prijmeni, "je stejne stary jako %s", s2.jmeno, "%s", s2.prijmeni, ".\n");
+		break;
 	}
 	return 0;
 };
-	
+
 
 int main() {
 	student s3;
-	s3.jmeno = "Erich";
-	s3.prijmeni = "Fiedler";
-	s3.narozen.Den = 11;
-	
-	student s1 = { *"Doktor", *"Zaba", {7, 7, 1980} };
-	student s2 = { *"Kuzma", *"Kuzmic", {11, 12, 1980} };
+	s3.jmeno[20] = "Erich";
+	s3.prijmeni[20] = "Fiedler";
+	//s3.narozen.Den = 11;
 
+	student s1 = { "Doktor", "Zaba",  7, 7, 1980};
+	student s2 = { "Kuzma", "Kuzmic", 11, 12, 1980};
+	
 	//printstarsiho(s1, s2, porovnej_vek(s1, s2));
-	
+
 	int porovnani = porovnej_vek(s1, s2);
-	
+
 	printstarsiho(s1, s2, porovnani);
 
 	//Všechno směrem dolů pokusy o debug
 
-	printf("\n");
-
-	printf("%d", porovnani);
-
-	printf("\n");
-
-	printf("%c", s2.jmeno);
-
-	printf("\n");
-
-
-
+	
 	system("pause");
 	return 0;
 }
