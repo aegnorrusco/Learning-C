@@ -60,12 +60,17 @@ int main() {
 	student s3;
 	s3.jmeno[20] = "Erich";
 	s3.prijmeni[20] = "Fiedler";
-	//s3.narozen.Den = 11;
+	//s3.narozen = {12, 11, 1960}; //Nefunkční pokus o deklaraci celého podtypu naráz
 
-	student s1 = { "Doktor", "Zaba",  7, 7, 1960};
-	student s2 = { "Kuzma", "Kuzmic", 11, 12, 1960};
+	s3.narozen.Den = 12;
+	s3.narozen.Mesic = 12;
+	s3.narozen.Rok = 1960;
+
+	student s1 = { "Doktor", "Zaba",  7, 7, 1960 };
+	student s2 = { "Kuzma", "Kuzmic", 11, 12, 1960 };
+	student s4 = { "Varel", "Fristensky", 20, 12, 1960 }; //Pro testování různých variant
 	
-	printstarsiho(s1, s2, porovnej_vek(s1, s2));
+	printstarsiho(s4, s1, porovnej_vek(s4, s1));
 
 	//Všechno směrem dolů pokusy o debug
 
