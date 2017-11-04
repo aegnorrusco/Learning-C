@@ -9,9 +9,9 @@ int main() {
 	printf("Zadejte velikost ctverce: ");
 	scanf_s("%d", &velikost);
 
-	//teï potøebujeme cyklus pro jednak øádek a jednak "sloupec"
+	//teÃ¯ potÃ¸ebujeme cyklus pro jednak Ã¸Ã¡dek a jednak "sloupec"
 
-	//první øádek:
+	//prvnÃ­ Ã¸Ã¡dek:
 	for (int i = 1; i <= velikost; i++) {
 		printf("*");
 		
@@ -20,7 +20,7 @@ int main() {
 
 	printf("\n");
 
-	//prostøední øádky:
+	//prostÃ¸ednÃ­ Ã¸Ã¡dky:
 	
 	for (int i = 1; i <= velikost - 2; i++) {
 		printf("*");
@@ -32,7 +32,7 @@ int main() {
 
 	}
 
-	//poslední øádek
+	//poslednÃ­ Ã¸Ã¡dek
 	for (int i = 1; i <= velikost; i++) {
 		printf("*");
 		
