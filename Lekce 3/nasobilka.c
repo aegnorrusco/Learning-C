@@ -6,7 +6,7 @@
 int main() {
 
 
-	/* Prvni varianta (Vöechny n·sobky pod nebo rovny 100)
+	/* Prvni varianta (V≈°echny n√°sobky pod nebo rovny 100)
 
 	int cislo;
 
@@ -22,7 +22,7 @@ int main() {
 	}
 	*/
 
-	/* Druha varianta (PrvnÌch sto n·sobk˘ libovolnÈ velikosti)
+	/* Druha varianta (Prvn√≠ch sto n√°sobk≈Ø libovoln√© velikosti)
 
 	int cislo;
 
@@ -56,7 +56,7 @@ int main() {
 	}
 	else if (chcizadatmez == "n") printf("Mezni hodnota zustava nastavena na 100. \n");
 
-	else printf("Vstup nerozpoznan. Zadejte 'y' pro zadani vlastni mezni hodnoty nebo 'n' pro zachovanÌ vychozi mezni hodnoty. \n");
+	else printf("Vstup nerozpoznan. Zadejte 'y' pro zadani vlastni mezni hodnoty nebo 'n' pro zachovan√≠ vychozi mezni hodnoty. \n");
 
 
 	int puvodnicislo = cislo;
