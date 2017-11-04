@@ -4,7 +4,7 @@
 
 int main() {
 	int suma = 0;
-	enum { velikostpole = 7 }; //uûitÌ na z·kladÏ https://stackoverflow.com/questions/1674032/static-const-vs-define-vs-enum
+	enum { velikostpole = 7 }; //u≈æit√≠ na z√°klad√¨ https://stackoverflow.com/questions/1674032/static-const-vs-define-vs-enum
 	int pole[velikostpole] = { 1, 2, 3, 4, 5, 6, 7};
 
 	for (int i = 0; i < velikostpole; i++) {
