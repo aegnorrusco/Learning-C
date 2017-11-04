@@ -43,13 +43,13 @@ int printstarsiho(student s1, student s2, int porovnanyvek) {
 	/* Vytiskne porovnání věků dvou studentů.*/
 	switch (porovnanyvek) {
 	case 1:
-		printf("%s", s1.jmeno, "%s", s1.prijmeni, "je starsi než %s", s2.jmeno, "%s", s2.prijmeni, ".\n");
+		printf("%s %s je starsi nez %s %s.\n", s1.jmeno, s1.prijmeni, s2.jmeno, s2.prijmeni);
 		break;
 	case -1:
-		printf("%s", s1.jmeno, "%s", s1.prijmeni, "je mladsi než %s", s2.jmeno, "%s", s2.prijmeni, ".\n");
+		printf("%s %s je mladsi nez %s %s.\n", s1.jmeno, s1.prijmeni, s2.jmeno, s2.prijmeni);
 		break;
 	case 0:
-		printf("%s", s1.jmeno, "%s", s1.prijmeni, "je stejne stary jako %s", s2.jmeno, "%s", s2.prijmeni, ".\n");
+		printf("%s %s je stejne stary jako %s %s.\n", s1.jmeno, s1.prijmeni, s2.jmeno, s2.prijmeni);
 		break;
 	}
 	return 0;
@@ -62,14 +62,10 @@ int main() {
 	s3.prijmeni[20] = "Fiedler";
 	//s3.narozen.Den = 11;
 
-	student s1 = { "Doktor", "Zaba",  7, 7, 1980};
-	student s2 = { "Kuzma", "Kuzmic", 11, 12, 1980};
+	student s1 = { "Doktor", "Zaba",  7, 7, 1960};
+	student s2 = { "Kuzma", "Kuzmic", 11, 12, 1960};
 	
-	//printstarsiho(s1, s2, porovnej_vek(s1, s2));
-
-	int porovnani = porovnej_vek(s1, s2);
-
-	printstarsiho(s1, s2, porovnani);
+	printstarsiho(s1, s2, porovnej_vek(s1, s2));
 
 	//Všechno směrem dolů pokusy o debug
 
