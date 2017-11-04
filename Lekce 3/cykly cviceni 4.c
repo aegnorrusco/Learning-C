@@ -24,7 +24,7 @@ int main() {
 	else printf("Zadany pocet byl nizsi nez 1.");
 
 
-	if (pocet > 1) printf("%d.", prvni_clen + diff*(pocet - 1)); // pro vytisknutÌ teËky u poslednÌho Ëlenu
+	if (pocet > 1) printf("%d.", prvni_clen + diff*(pocet - 1)); // pro vytisknut√≠ te√®ky u posledn√≠ho √®lenu
 
 
 
