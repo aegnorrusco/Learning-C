@@ -12,7 +12,7 @@ int main() {
 	scanf_s("%g", &treti_cislo);
 
 
-	/* Druhé øešení
+	/* DruhÃ© Ã¸eÅ¡enÃ­
 	
 	if (prvni_cislo >= druhe_cislo) maxcislo = prvni_cislo;
 	else maxcislo = druhe_cislo;
