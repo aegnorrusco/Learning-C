@@ -1,10 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+// Porovná věk dvou studentů užitím funkce a vlastních strukturovaných datových typů, následně vypíše
+// Zadání - http://jazykc.inf.upol.cz/strukturovane-datove-typy/index.htm
+
+
 typedef struct {
 	char Den, Mesic; short Rok;
 } Datum;
-
 
 
 typedef struct {
@@ -59,24 +62,26 @@ int main() {
 	s3.prijmeni = "Fiedler";
 	s3.narozen.Den = 11;
 	
-	student s1 = { "Doktor", "Zaba", {7, 7, 1980} };
-	student s2 = { "Kuzma", "Kuzmic", {11, 12, 1980} };
+	student s1 = { *"Doktor", *"Zaba", {7, 7, 1980} };
+	student s2 = { *"Kuzma", *"Kuzmic", {11, 12, 1980} };
 
 	//printstarsiho(s1, s2, porovnej_vek(s1, s2));
 	
-	int porovnani = porovnej_vek(s1, s1);
+	int porovnani = porovnej_vek(s1, s2);
 	
 	printstarsiho(s1, s2, porovnani);
 
 	//Všechno směrem dolů pokusy o debug
 
-	char *s2j = s2.jmeno;
+	printf("\n");
 
-
-	printf("%s", *s2j);
 	printf("%d", porovnani);
-	printf("%d", s1.narozen.Den);
-	
+
+	printf("\n");
+
+	printf("%c", s2.jmeno);
+
+	printf("\n");
 
 
 
