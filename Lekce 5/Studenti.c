@@ -5,6 +5,15 @@
 // Zadání - http://jazykc.inf.upol.cz/strukturovane-datove-typy/index.htm
 
 
+/* Aegnor commentary:
+ * ten char pouzity na cisla je takovy ... z meho pohledu zmatecny. Do znaku
+ * ukladas cislo. Lepsi by dle me byl short.
+ *
+ * Druha matouci vec jsou ty deklarace na jednom radku. Myslim si, ze je lepsi
+ * odradkovat s kazdym strednikem. Napriklad u struktury student ... na prvni
+ * pohled tam vidim dve pole charu (jmeno a prijmeni) a dva chary "Datum" a
+ * "narozen".
+ */
 typedef struct {
 	char Den, Mesic; short Rok;
 } Datum;
@@ -13,6 +22,18 @@ typedef struct {
 typedef struct {
 	char jmeno[20], prijmeni[20]; Datum narozen;
 } student;
+
+/* Aegnor commentary:
+ * Uzus byva takovy, ze kdyz porovnavam dve veci, tak zaporny vysledek znamena,
+ * ze prvni je mensi nez druhy, kladny vysledek rika, ze prvni je vetsi nez druhy.
+ * 
+ * Dalsi poznamka je, ze bych tady uz docela vyuzival preprocessor a #define.
+ * #define RET_LOWER -1
+ * #define RET_HIGHER 1
+ * #define RET_EQUAL 0
+ *
+ * a pak v kodu bych mel "return RET_HIGHER" misto "return 1".
+ */
 
 int porovnej_vek(student s1, student s2) {
 	/* Pokud je s1 starší, vrátí hodnotu 1. Pokud je s2 starší, vrátí hodnotu -1.
@@ -36,9 +57,18 @@ int porovnej_vek(student s1, student s2) {
 		return -1;
 
 };
-
+/* Aegnor commentary:
+ * Whiskey Tango Foxtrot! Proc tu najednou deklarujes nejakou globalni promennou?
+ * Vubec nevidim duvod ji tu mit.
+ */
 int porovnanyvek = 0;
 
+/* Aegnor commentary:
+ * Ja jsem zvykly ridit se pravidlem, ze na stdin a stdout ma pravo sahat pouze
+ * main. (stdin == standart input, cteni ze vstupu; stdout == standart output,
+ * vypis na vystup) Z tohohle pohledu uplne nevidim uzitecnost teto funkce.
+ *
+ */
 int printstarsiho(student s1, student s2, int porovnanyvek) {
 	/* Vytiskne porovnání věků dvou studentů.*/
 	switch (porovnanyvek) {
